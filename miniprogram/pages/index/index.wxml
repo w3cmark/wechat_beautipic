@@ -1,0 +1,32 @@
+<view class="add-tips" wx:if="{{hasShowAddTips == 0}}" bindtap="hideTips">点击「添加到我的小程序」，下次访问更便捷</view>
+<view class="container">
+    <navigator url="/pages/compress/index" class="item">
+        <view class="item-tit">照片压缩</view>
+        <view class="item-con">多照片批量压缩</view>
+        <image src="../images/tpys.png" class="tpys" />
+    </navigator>
+    <navigator url="/pages/longimg/index" class="item">
+        <view class="item-tit">长图拼接</view>
+        <view class="item-con">多张图拼接成长图</view>
+        <image src="../images/longimg.png" class="longimg" />
+    </navigator>
+    <navigator url="/pages/longimg/index" class="item">
+        <view class="item-tit">拍立得</view>
+        <view class="item-con">拍立得相机效果</view>
+        <image src="../images/instant.png" class="instant" />
+    </navigator>
+    <!--
+    <navigator url="/pages/puzzle/index" class="item">
+        <image src="../images/puzzle.png" class="puzzle" />
+        <view class="item-tit">一键拼图</view>
+        <view class="item-con">把多张图片组合在一起</view>
+    </navigator>
+    
+    <navigator url="/pages/filter/index" class="item">
+        <image src="../images/tplj.png" />
+        <view class="item-tit">图片滤镜</view>
+        <view class="item-con">我是描述</view>
+    </navigator>
+    -->
+</view>
+<image src="../images/bg.jpeg" class="bg" mode="widthFix" />

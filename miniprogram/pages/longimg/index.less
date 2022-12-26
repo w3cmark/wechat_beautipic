@@ -1,0 +1,84 @@
+/**index.wxss**/
+page{
+  background-color: #f2f2f2;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+  width: 100%;
+  font-size: 28rpx;
+  position: absolute;
+  z-index: 1;
+  bottom: 60rpx;
+}
+.add-btn{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 200rpx;
+  background-color: #eccc01;
+  font-size: 20rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #555;
+  justify-content: center;
+  image {
+    width: 40rpx;
+    height: 40rpx;
+    display: block;
+    opacity: 0.5;
+    margin-bottom: 5rpx;
+  }
+}
+.select-btn{
+  position: absolute;
+  z-index: 10;
+  right: 200rpx;
+  bottom: 20rpx;
+  width: 180rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 15rpx;
+  background-color: #eee;
+  font-size: 28rpx;
+  margin: 20rpx;
+  float: right;
+  box-shadow: 4rpx 4rpx #ddd;
+}
+.save-btn{
+  position: absolute;
+  z-index: 10;
+  right: 20rpx;
+  bottom: 20rpx;
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 15rpx;
+  background-color: #fcf175;
+  font-size: 28rpx;
+  margin: 20rpx;
+  float: right;
+  box-shadow: 4rpx 4rpx #ddd;
+}
+.preview{
+  width: 100%;
+  min-height: 71vh;
+  // overflow-y: auto;
+  // display: flex;
+  // align-items: center;
+  // flex-direction: column;
+  canvas {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+.preview-template1{
+  width: 750rpx;
+}

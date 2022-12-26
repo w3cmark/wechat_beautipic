@@ -1,0 +1,212 @@
+<view class="puzzle-container">
+  <view class="userinfo" bindtap="bindViewTap" wx:if="{{imgFiles.length < 1}}">
+    <image src="../images/upload.png" />
+    请选择多张照片
+  </view>
+  <view wx:else>
+    <view class="preview">
+      <view class="preview-template{{imgSize}}">
+        <canvas type="2d" id="previewCanvas"></canvas>
+      </view>
+    </view>
+    <view class="save-tab">
+      <view class="save-btn">保存照片</view>
+    </view>
+    <view class="layout layout2" wx:if="{{imgFiles.length == 2}}">
+      <view class="layout-item layout-item1 {{imgLayout == '1' ? 'selected' : ''}}" data-layout="1" bindtap="bindLayoutTap">
+        <view class="layout-item-inner">
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+        </view>
+      </view>
+      <view class="layout-item layout-item2 {{imgLayout == '2' ? 'selected' : ''}}" data-layout="2" bindtap="bindLayoutTap">
+        <view class="layout-item-inner">
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+        </view>
+      </view>
+      <view class="layout-item layout-item3 {{imgLayout == '3' ? 'selected' : ''}}" data-layout="3" bindtap="bindLayoutTap">
+        <view class="layout-item-inner">
+          <view class="layout-block"></view>
+          <view class="flex">
+          <view class="layout-block"></view>
+          </view>
+        </view>
+      </view>
+      <view class="layout-item layout-item4 {{imgLayout == '4' ? 'selected' : ''}}" data-layout="4" bindtap="bindLayoutTap">
+        <view class="layout-item-inner">
+          <view class="layout-block"></view>
+          <view class="flex">
+          <view class="layout-block"></view>
+          </view>
+        </view>
+      </view>
+      <view class="layout-item layout-item5 {{imgLayout == '5' ? 'selected' : ''}}" data-layout="5" bindtap="bindLayoutTap">
+        <view class="layout-item-inner">
+          <view class="layout-block"></view>
+          <view class="flex">
+          <view class="layout-block"></view>
+          </view>
+        </view>
+      </view>
+      <view class="layout-item layout-item6 {{imgLayout == '6' ? 'selected' : ''}}" data-layout="6" bindtap="bindLayoutTap">
+        <view class="layout-item-inner">
+          <view class="layout-block"></view>
+          <view class="flex">
+          <view class="layout-block"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="layout layout3" wx:if="{{imgFiles.length == 3}}">
+      <view class="layout-item layout-item1 {{imgLayout == '1' ? 'selected' : ''}}" data-layout="1" bindtap="bindLayoutTap">
+        <view class="layout-item-inner">
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+        </view>
+      </view>
+      <view class="layout-item layout-item2 {{imgLayout == '2' ? 'selected' : ''}}" data-layout="2" bindtap="bindLayoutTap">
+        <view class="layout-item-inner">
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+        </view>
+      </view>
+      <view class="layout-item layout-item3 {{imgLayout == '3' ? 'selected' : ''}}" data-layout="3" bindtap="bindLayoutTap">
+        <view class="layout-item-inner">
+          <view class="layout-block"></view>
+          <view class="flex">
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+          </view>
+        </view>
+      </view>
+      <view class="layout-item layout-item4 {{imgLayout == '4' ? 'selected' : ''}}" data-layout="4" bindtap="bindLayoutTap">
+        <view class="layout-item-inner">
+          <view class="layout-block"></view>
+          <view class="flex">
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+          </view>
+        </view>
+      </view>
+      <view class="layout-item layout-item5 {{imgLayout == '5' ? 'selected' : ''}}" data-layout="5" bindtap="bindLayoutTap">
+        <view class="layout-item-inner">
+          <view class="layout-block"></view>
+          <view class="flex">
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+          </view>
+        </view>
+      </view>
+      <view class="layout-item layout-item6 {{imgLayout == '6' ? 'selected' : ''}}" data-layout="6" bindtap="bindLayoutTap">
+        <view class="layout-item-inner">
+          <view class="layout-block"></view>
+          <view class="flex">
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="layout layout4" wx:if="{{imgFiles.length == 4}}">
+      <view class="layout-item layout-item1 {{imgLayout == '1' ? 'selected' : ''}}" data-layout="1" bindtap="bindLayoutTap">
+        <view class="layout-item-inner">
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+        </view>
+      </view>
+      <view class="layout-item layout-item2 {{imgLayout == '2' ? 'selected' : ''}}" data-layout="2" bindtap="bindLayoutTap">
+        <view class="layout-item-inner">
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+        </view>
+      </view>
+      <view class="layout-item layout-item3 {{imgLayout == '3' ? 'selected' : ''}}" data-layout="3" bindtap="bindLayoutTap">
+        <view class="layout-item-inner">
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+        </view>
+      </view>
+      <view class="layout-item layout-item4 {{imgLayout == '4' ? 'selected' : ''}}" data-layout="4" bindtap="bindLayoutTap">
+        <view class="layout-item-inner">
+          <view class="flex">
+          <view class="layout-block" style="width: 25rpx"></view>
+          <view class="layout-block" style="width: 40rpx"></view>
+          </view>
+          <view class="flex">
+          <view class="layout-block" style="width: 40rpx"></view>
+          <view class="layout-block" style="width: 25rpx"></view>
+          </view>
+        </view>
+      </view>
+      <view class="layout-item layout-item5 {{imgLayout == '5' ? 'selected' : ''}}" data-layout="5" bindtap="bindLayoutTap">
+        <view class="layout-item-inner">
+          <view class="flex">
+          <view class="layout-block" style="width: 40rpx"></view>
+          <view class="layout-block" style="width: 25rpx"></view>
+          </view>
+          <view class="flex">
+          <view class="layout-block" style="width: 25rpx"></view>
+          <view class="layout-block" style="width: 40rpx"></view>
+          </view>
+        </view>
+      </view>
+      <view class="layout-item layout-item6 {{imgLayout == '6' ? 'selected' : ''}}" data-layout="6" bindtap="bindLayoutTap">
+        <view class="layout-item-inner">
+          <view class="layout-block"></view>
+          <view class="flex">
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+          <view class="layout-block"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="scale">
+      <view class="scale-item {{imgSize == '1' ? 'selected' : ''}}" bindtap="bindScaleTap" data-size="1">
+        <view class="scale-icon">
+          <view class="scale-item-icon scale-item-icon1"></view>
+        </view>
+        <view class="scale-item-text">1:1</view>
+      </view>
+      <view class="scale-item {{imgSize == '2' ? 'selected' : ''}}" bindtap="bindScaleTap" data-size="2">
+        <view class="scale-icon">
+          <view class="scale-item-icon scale-item-icon2"></view>
+        </view>
+        <view class="scale-item-text">3:4</view>
+      </view>
+      <view class="scale-item {{imgSize == '3' ? 'selected' : ''}}" bindtap="bindScaleTap" data-size="3">
+        <view class="scale-icon">
+          <view class="scale-item-icon scale-item-icon3"></view>
+        </view>
+        <view class="scale-item-text">2:3</view>
+      </view>
+      <view class="scale-item {{imgSize == '4' ? 'selected' : ''}}" bindtap="bindScaleTap" data-size="4">
+        <view class="scale-icon">
+          <view class="scale-item-icon scale-item-icon4"></view>
+        </view>
+        <view class="scale-item-text">9:16</view>
+      </view>
+      <view class="scale-item {{imgSize == '5' ? 'selected' : ''}}" bindtap="bindScaleTap" data-size="5">
+        <view class="scale-icon">
+          <view class="scale-item-icon scale-item-icon5"></view>
+        </view>
+        <view class="scale-item-text">16:9</view>
+      </view>
+      <view class="scale-item {{imgSize == '6' ? 'selected' : ''}}" bindtap="bindScaleTap" data-size="6">
+        <view class="scale-icon">
+          <view class="scale-item-icon scale-item-icon6"></view>
+        </view>
+        <view class="scale-item-text">3:2</view>
+      </view>
+    </view>
+  </view>
+</view>

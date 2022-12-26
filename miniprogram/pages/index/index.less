@@ -1,0 +1,88 @@
+/* pages/index/index.wxss */
+page{
+    background-color: #fff;
+    // background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKAgMAAADwXCcuAAAADFBMVEUAAADu2m/u2m/u2m+k1m2eAAAABHRSTlMAH3YPTTNBNgAAACVJREFUCNdjYGA4wMDAuIGBgc2BgUESyE0BcidAuJZALg8DGAAAVqQDUTNudi4AAAAASUVORK5CYII=) repeat;
+}
+.add-tips{
+    position: absolute;
+    z-index: 10;
+    top: 20rpx;
+    right: 10rpx;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10rpx;
+    font-size: 24rpx;
+    border-radius: 15rpx;
+    color: #fff;
+    &::after{
+        content: '';
+        position: absolute;
+        z-index: 15;
+        top: -40rpx;
+        right: 100rpx;
+        // width: 25rpx;
+        // height: 25rpx;
+        border-style: solid;
+        border-width: 20rpx;
+        border-color: transparent transparent rgba(0, 0, 0, 0.5) transparent;
+    }
+}
+.bg{
+    width: 100%;
+    height: auto;
+    position:absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+}
+.container{
+    position: relative;
+    z-index: 2;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    padding: 0 45rpx;
+}
+.item {
+    height: 140rpx;
+    padding-top: 25rpx;
+    padding-left: 25rpx;
+    box-sizing: border-box;
+    background-color: #eccc01;
+    // box-shadow: 4rpx 4rpx #eee;
+    //border: 1rpx solid #f60;
+    width: 47%;
+    margin-top: 25rpx;
+    position: relative;
+    z-index: 1;
+    border-radius: 20rpx;
+    .item-tit{
+        font-size: 32rpx;
+        font-weight: bold;
+        color: #fff;
+    }
+    .item-con{
+        font-size: 24rpx;
+        color: #f2f2f2;
+        padding-top: 5rpx;
+    }
+    image{
+        width: 65rpx;
+        height: 65rpx;
+        position: absolute;
+        z-index: 2;
+        right: 25rpx;
+        top: 50%;
+        transform: translateY(-50%);
+        box-sizing: border-box;
+        &.tpys{
+            border-radius: 50rpx;
+            border: 3rpx solid #fff;
+            padding: 10rpx;
+        }
+        &.puzzle,&.longimg{
+            // border: 3rpx solid #fff;
+            border-radius: 25rpx;
+            padding: 3rpx;
+        }
+    }
+}

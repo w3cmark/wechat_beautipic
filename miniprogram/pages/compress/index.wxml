@@ -1,0 +1,33 @@
+<view class="userinfo" bindtap="bindViewTap" wx:if="{{imgFiles.length < 1}}">
+  <view class="add-btn">
+    <image src="../images/upload.png" />
+    添加图片
+  </view>
+</view>
+<view class="preview" wx:else>
+  <swiper class="preview-swiper" indicator-dots="{{indicatorDots}}" bindchange="changeImage">
+      <block wx:for="{{imgFiles}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item {{item}}">
+            <image src="{{item.compressTempFilePath}}" mode="aspectFit"/>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="image-info">
+      <view>原图大小：<text>{{imgFiles[currentIndex].size}}</text> KB </view>
+      <view>压缩后：<text>{{imgFiles[currentIndex].compressSize}}</text> KB </view>
+    </view>
+    <view class="image-info-tips">1024 KB = 1 MB</view>
+    <view class="quality">
+      <text class="section__title">压缩力度：</text>
+      <view class="body-view">
+        <slider block-size="16" backgroundColor="#ccc" activeColor="#f60" bindchange="sliderChange" min="20" max="100" step="5" value="{{imgFiles[currentIndex].quality}}" show-value/>
+      </view>
+    </view>
+    <view class="btns">
+      <view class="change-btn" bindtap="bindViewTap" >重新选择</view>
+      <view class="save-btn" bindtap="saveImage"><image src="../images/download.png" />保存到相册</view>
+    </view>
+</view>

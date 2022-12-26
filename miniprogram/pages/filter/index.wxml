@@ -1,0 +1,6 @@
+<view class="container">
+    <view class="userinfo" bindtap="bindViewTap">
+    <image src="../images/upload.png" />
+    选择图片（支持多张）
+  </view>
+</view>

@@ -1,0 +1,13 @@
+<view class="userinfo" bindtap="bindViewTap" wx:if="{{imgFiles.length < 1}}">
+  <view class="add-btn">
+    <image src="../images/upload.png" />
+    添加图片
+  </view>
+</view>
+<view class="preview" wx:else>
+
+    <view class="btns">
+      <view class="change-btn" bindtap="bindViewTap" >重新选择</view>
+      <view class="save-btn" bindtap="saveImage">保存到相册</view>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="userinfo" bindtap="bindViewTap" wx:if="{{imgFiles.length < 1}}">
+    <view class="add-btn">
+    <image src="../images/upload.png" />
+    选择照片
+    </view>
+  </view>
+  <view class="preview" wx:else>
+    <view class="select-btn" bindtap="bindViewTap">重新选择</view>
+    <view class="save-btn" bindtap="getTempFilePath">保存到相册</view>
+    <view class="preview-template{{type}}">
+      <canvas canvas-id="previewCanvas" type="2d" id="previewCanvas" style="height: {{canvas_h}}px; width: {{canvas_w}}px"></canvas>
+    </view>
+  </view>
+</view>
