@@ -4,7 +4,7 @@
 
 ## 扫下方小程序码体验
 
-![image](https://raw.githubusercontent.com/w3cmark/wechat_beautipic/master/assets/gh_93d61c99d4f1_1280.jpg)
+<img src="https://raw.githubusercontent.com/w3cmark/wechat_beautipic/master/assets/gh_93d61c99d4f1_1280.jpg" width="300"/>
 
 ![image](https://raw.githubusercontent.com/w3cmark/wechat_beautipic/master/assets/WX20221226-222544@2x.png)
 
